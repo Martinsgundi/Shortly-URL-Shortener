@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.h-tags {
+    @apply font-bold text-neutral-veryDarkBlue;
+}
+
+.drpdown-padding {
+    padding-top: 2.25rem;
+    padding-bottom: 2.25rem;
+}
+
+/* Hover state for nav-list */
+.d-nav-li {
+    @apply transition duration-300 ease-out hover:text-neutral-veryDarkViolet;
+}
+
+/* Hover state for button */
+.btn-hover {
+    @apply transition-opacity duration-300 ease-out hover:opacity-60;
+}
+
+/* Hover state for blue-bg-button */
+.blue-bg-btn:hover::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(225, 225, 225, 0.5);
+    pointer-events: none; /* Allows clicks to pass through the overlay */
+    transition: background-color 0.3s ease-out;
+}
+
+.illustration-img {
+    background: url('/public/asset/images/illustration-working.svg') no-repeat;
+    background-size: cover;
+    position: relative;
+    right: -1.5rem;
+}
+
+/* Form background */
+.shorten-m-bg {
+    background: url('/public/asset/images/bg-shorten-mobile.svg') no-repeat;
+    background-position: right top;
+    background-color: hsl(257, 27%, 26%);
+}
+
+/*  Img-icon style for all section-cards */
+.section-icon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-radius: 50%;
+    transform: translate(-57%, -50%);
+    background-color: hsl(257, 27%, 26%);
+}
+
+
+@media (max-width:1179px) {
+    /* Card connector (sm & lg screen) */
+    .connector::after {
+        content: '';
+        position: absolute;
+        width: 0.5rem;
+        height: 3.5rem;
+        bottom: -3.5rem;
+        left: 48%;
+        transform: translateX(-11%);
+        background-color: hsl(180, 66%, 49%);
+    }
+}
+
+/* Custom styles for "md" breakpoint */
+@media (min-width:768px) {
+    .md\:form-parent-md {
+        padding: max(3.1vw, 1.5rem);
+    } 
+
+    .md\:width {  /* Input width */
+        width: min(80%, 50rem);
+    }
+
+    .btn {  /* form btn */
+        width: min(20%, 11rem);
+        padding: max(1%,0.5rem) max(2%,0.5rem);
+    }
+}
+
+/* Custom styles for the "lg" breakpoint */
+@media (min-width: 1024px) {
+    .lg\:form-parent-lg {
+      padding: max(3.5vw, 1.5rem) max(4vw, 1.5rem);
+    }
+}
+
+@media (min-width: 1180px) {
+    .section-icon {
+        left: 10%;
+        transform: translate(0%, -50%);
+    }
+
+    /* Card connector (xl screen) */
+    .connector::after {
+        content: '';
+        position: absolute;
+        width: 0.5rem;
+        height: 2.2rem;
+        right: -1.4rem;
+        top: 50%;
+        transform: rotate(90deg);
+        background-color: hsl(180, 66%, 49%);
+    }
+
+    /* Aligns the horizontal connector with the latter on xl screens  */
+    .card-wrapper :nth-child(2)::after {
+        top: 37%;
+    }
+}
+
+/* Hover state for footer */
+.li-hover:hover { /* nav-links */
+    color: hsl(180, 66%, 49%);
+    transition: color 0.3s ease;
+}
+
+.svg-container:hover svg path {  /* Social-icons */
+    fill: hsl(180, 66%, 49%);
+    transition: fill 0.3s ease;
+}
+
+/* Style for form validation */  
+#url-input.input-error {
+    border: 2px solid hsl(0, 87%, 67%);
+}
+
+#url-input.input-error::placeholder {
+    color: hsl(0, 87%, 67%);
+}
+
+.form-wrapper.input-error::after {
+    content: 'Please add a link';
+	color: hsl(0, 87%, 67%);
+	left: 0;
+    padding-left: 1.5rem;
+	position: absolute;
+	bottom: 5.3rem;
+	font-size: 0.83rem;
+	font-style: italic; 
+}
+
+@media(min-width: 510px) {
+    .form-wrapper.input-error::after {
+        left: 50%;
+        transform: translateX(-50%);
+        padding-left: 0;
+    }
+}
+
+@media(max-width: 767px) {
+    #form.input-error {
+        gap:2.5rem;
+    }
+}
+
+@media(min-width: 768px) {
+    .form-wrapper.input-error::after {
+        left: 0;
+        transform: translateX(0);
+        padding-left: max(3.1vw, 1.5rem);
+        bottom: 0;
+    }
+}
+
+@media(min-width: 1024px) {
+    .form-wrapper.input-error::after {
+        padding-left: max(4vw, 1.5rem);
+        /* bottom: 0.5rem; */
+        bottom: 8%;
+    }
+}
