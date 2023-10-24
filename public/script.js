@@ -123,7 +123,7 @@ const shortenUrl = async (inputUrl) => {
         </div>
             
         <!-- Long Link -->
-        <div class="min-[475px]:text-center lg:text-left">
+        <div class="max-w-[25ch] overflow-x-scroll min-[475px]:mx-auto min-[475px]:text-center min-[475px]:max-w-[35ch] lg:text-left lg:mx-0">
           <span class="text-base text-neutral-veryDarkViolet xl:text-xl">${longUrl}</span>   
         </div>
         
@@ -131,8 +131,8 @@ const shortenUrl = async (inputUrl) => {
         
         <!-- Short Link -->
         <div class="flex flex-col gap-3 min-[475px]:items-center lg:gap-6 lg:flex-row">
-          <span class="text-base text-primary-cyan xl:text-xl">${shrtUrl}</span>
-          <button class="copy-btn text-base relative w-full py-[0.5rem] max-w-[400px] font-bold text-white rounded-md bg-primary-cyan before:rounded-md btn-hover lg:px-6 xl:px-8">Copy</button>
+          <span class="text-base text-primary-cyan lg:w-full xl:text-xl">${shrtUrl}</span>
+          <button class="copy-btn text-base relative w-full py-[0.5rem] max-w-[400px] font-bold text-white rounded-md bg-primary-cyan before:rounded-md btn-hover lg:px-6 xl:px-8 lg:w-[25%]">Copy</button>
         </div>
       </div>
     `;
@@ -238,16 +238,16 @@ window.addEventListener('load', () => {
           </div>
 
           <!-- Long Link -->
-          <div class="min-[475px]:text-center lg:text-left">
-            <span class="text-base text-neutral-veryDarkViolet md:text-lg lg:text-[1.2rem] xl:text-xl">${link.longUrl}</span>   
+          <div class="max-w-[25ch] overflow-x-scroll min-[475px]:mx-auto min-[475px]:text-center min-[475px]:max-w-[35ch] lg:text-left lg:mx-0">
+            <span class="text-base text-neutral-veryDarkViolet xl:text-xl">${link.longUrl}</span>   
           </div>
           
           <div class="my-3 border-t border-gray-300 lg:hidden"></div> <!--Divider -->
           
           <!-- Short Link -->
           <div class="flex flex-col gap-3 min-[475px]:items-center lg:gap-6 lg:flex-row">
-            <span class="text-base text-primary-cyan md:text-lg lg:text-[1.2rem] xl:text-xl">${link.shrtUrl}</span>
-            <button class="copy-btn text-base relative w-full py-[0.5rem] max-w-[400px] font-bold text-white rounded-md bg-primary-cyan before:rounded-md btn-hover lg:px-6 xl:px-8">Copy</button>
+            <span class="text-base text-primary-cyan lg:w-full xl:text-xl">${link.shrtUrl}</span>
+            <button class="copy-btn text-base relative w-full py-[0.5rem] max-w-[400px] font-bold text-white rounded-md bg-primary-cyan before:rounded-md btn-hover lg:px-6 xl:px-8 lg:w-[25%]">Copy</button>
           </div>
         </div>
       `;
