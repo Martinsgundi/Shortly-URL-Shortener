@@ -6,7 +6,6 @@
     <title>Shortly</title>
     <link rel="stylesheet" href="output.css">
     <link rel="shortcut icon" href="asset/images/favicon-32x32.png" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
 </head>
 <body class="text-lg font-Poppins text-neutral-grayishViolet">
 
@@ -70,7 +69,7 @@
         <main>
             <div> <!--main-container-->
                 <div class="grid mb-40 overflow-x-clip md:mb-48 md:grid-cols-[minmax(0,_59%)_minmax(0,_1fr)] ">
-                    <div class="illustration-img h-[20.5rem] mt-3 mb-14 min-[500px]:h-[30rem] md:ml-0 md:top-12 md:h-[22rem] md:mb-0 xl:h-[27rem] xl:right-[-2rem]"></div>
+                    <div class="illustration-img bg-[url('asset/images/illustration-working.svg')] h-[20.5rem] mt-3 mb-14 min-[500px]:h-[30rem] md:ml-0 md:top-12 md:h-[22rem] md:mb-0 xl:h-[27rem] xl:right-[-2rem]"></div>
 
                     <div class="px-[6vw] text-center md:row-start-1 md:pr-0 md:text-left md:self-end min-[900px]:pl-[10vw] xl:pl-[12vw]">
                         <h1 class="mb-3 text-[2.5rem] leading-[3rem] h-tags md:mb-0 md:text-5xl md:leading-[3.75rem] lg:text-6xl lg:leading-[1.1] xl:text-[5rem]">More than just shorter links</h1>
@@ -86,16 +85,17 @@
 
                 <div class="bg-gray-100"> <!--Bg-overlay-->
                     <!-- Form -->
-                    <div class="form-wrapper shorten-m-bg mx-[6vw] py-6 px-6 mb-[-3.7rem] rounded-[0.6rem] translate-y-[-50%] md:mb-[-2.5rem] md:form-parent-md md:bg-[url('/public/asset/images/bg-shorten-desktop.svg')] md:bg-top lg:mb-[-3.5rem] lg:form-parent-lg min-[900px]:mx-[10vw] xl:mx-[12vw]">
+                    <div class="form-wrapper shorten-m-bg bg-[url('asset/images/bg-shorten-mobile.svg')] mx-[6vw] py-6 px-6 mb-[-3.7rem] rounded-[0.6rem] translate-y-[-50%] md:mb-[-2.5rem] md:form-parent-md md:bg-[url('/public/asset/images/bg-shorten-desktop.svg')] md:bg-top lg:mb-[-3.5rem] lg:form-parent-lg min-[900px]:mx-[10vw] xl:mx-[12vw]">
                         <form id="form" class="flex flex-col w-full gap-4 max-w-[400px] mx-auto md:flex-row md:mx-0 md:max-w-full">
                             <input type="text" id="url-input" class="relative text-base px-4 py-3 text-[1rem] border-2 border-gray-100 rounded-md outline-none md:width md:text-lg md:py-4 md:px-6 xl:px-8" placeholder="Shorten a link here...">
-                            <button id="shorten-btn" class="blue-bg-btn relative py-[0.65rem] font-bold text-white rounded-md btn px-9 bg-primary-cyan before:rounded-md">Shorten It!</button>
+                            <button id="shorten-btn" class="relative py-[0.65rem] font-bold text-white rounded-md btn px-9 bg-primary-cyan before:rounded-md blue-bg-btn">Shorten It!</button>
                         </form>
                     </div>
 
                     <!-- Shortened Links & Long links -->
                     <div id="result" class="grid gap-6 mx-[6vw] md:gap-4 min-[900px]:mx-[10vw] xl:mx-[12vw]">
                         <!-- The API data would be appended here -->
+                        
                     </div>
 
                     <article class="text-center text5base mt-[5.5rem] md:mt-32 ">
@@ -111,7 +111,7 @@
                             
                             <!-- Card-1 -->
                             <section class="connector relative w-full px-[7%] pt-20 pb-8 bg-white border rounded-md max-w-[457px] min-[1180px]:px-[6%]">
-                                <div class="section-icon p-[1.4rem]"><img src="/public/asset/images/icon-brand-recognition.svg" alt="brand-recognition-icon"></div>
+                                <div class="section-icon p-[1.4rem]"><img src="asset/images/icon-brand-recognition.svg" alt="brand-recognition-icon"></div>
                                 <h3 class="text-[1.4rem] h-tags mb-4">Brand Recognition</h3>
                                 <p class="leading-[1.7]">
                                     Boost your brand recognition with 
@@ -122,7 +122,7 @@
                             
                             <!-- Card-2 -->
                             <section class="connector relative w-full px-[7%] pt-20 pb-8 bg-white border rounded-md max-w-[457px] min-[1180px]:px-[6%] min-[1180px]:mb-[-2.5rem] min-[1180px]:mt-[2.5rem]">
-                                <div class="section-icon p-[1.5rem]"><img src="/public/asset/images/icon-detailed-records.svg" alt="detailed-records-icon"></div>
+                                <div class="section-icon p-[1.5rem]"><img src="asset/images/icon-detailed-records.svg" alt="detailed-records-icon"></div>
                                 <h3 class="mb-4 text-[1.4rem] h-tags">Detailed Records</h3>
                                 <p class="leading-[1.7]">
                                     Gain insights into who is clicking your links. Knowing 
@@ -133,7 +133,7 @@
                             
                             <!-- Card-3 -->
                             <section class="relative w-full pt-20 pb-8 px-[7%] bg-white border rounded-md max-w-[457px] min-[1180px]:px-[6%] min-[1180px]:mb-[-5rem] min-[1180px]:mt-[5rem]">
-                                <div class="section-icon p-[1.25rem]"><img src="/public/asset/images/icon-fully-customizable.svg" alt="fully-customizable-icon"></div>
+                                <div class="section-icon p-[1.25rem]"><img src="asset/images/icon-fully-customizable.svg" alt="fully-customizable-icon"></div>
                                 <h3 class="mb-4 text-[1.4rem] h-tags">Fully Customizable</h3>
                                 <p class="leading-[1.7]">
                                     Improve brand awareness and content discoverability 
@@ -143,9 +143,9 @@
                             </section>
                         </section>
     
-                        <section class="py-24 px-[6vw] text-white bg-primary-darkViolet bg-[url('/public/asset/images/bg-boost-mobile.svg')] bg-no-repeat bg-center bg-cover md:bg-[url('/public/asset/images/bg-boost-desktop.svg')] md:pt-20 md:pb-16">
+                        <section class="py-24 px-[6vw] text-white bg-primary-darkViolet bg-[url('asset/images/bg-boost-mobile.svg')] bg-no-repeat bg-center bg-cover md:bg-[url('/public/asset/images/bg-boost-desktop.svg')] md:pt-20 md:pb-16">
                             <h2 class="font-bold text-[1.65rem] mb-6 md:text-[2.5rem] md:mb-10">Boost your links today</h2>
-                            <button class="relative blue-bg-btn px-10 py-[0.85rem] text-xl font-bold rounded-full bg-primary-cyan before:rounded-full">Get Started</button>
+                            <button class="relative px-10 py-[0.85rem] text-xl font-bold rounded-full bg-primary-cyan before:rounded-full blue-bg-btn">Get Started</button>
                         </section>
                     </article>
                 </div>
@@ -156,7 +156,7 @@
         <footer>
             <div class="text-center text-[15px] bg-neutral-veryDarkViolet grid gap-10 sm:px-[6vw] min-[900px]:px-[10vw] min-[1140px]:grid-cols-[1fr_50%_1fr] lg:py-16 xl:px-[12vw]"> <!--Footer container-->
                 <div class="pt-12 lg:pt-0 min-[1140px] :grid"> <!--Logo-->
-                    <a href="#" class="inline-block"><img src="/public/asset/images/logo-footer.svg" alt="Shortly"/></a>
+                    <a href="#" class="inline-block"><img src="asset/images/logo-footer.svg" alt="Shortly"/></a>
                 </div>
 
                 <nav class="grid gap-10 sm:grid-cols-3 sm:gap-0 sm:text-left sm:justify-items-center sm:items-baseline min-[1140px]:justify-items-end">

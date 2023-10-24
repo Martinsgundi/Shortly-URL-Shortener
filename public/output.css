@@ -686,6 +686,10 @@ video {
   display: none;
 }
 
+.h-6{
+  height: 1.5rem;
+}
+
 .h-\[20\.5rem\]{
   height: 20.5rem;
 }
@@ -771,6 +775,10 @@ video {
   gap: 0.3rem;
 }
 
+.justify-self-end{
+  justify-self: end;
+}
+
 .overflow-hidden{
   overflow: hidden;
 }
@@ -847,8 +855,16 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-\[url\(\'\/public\/asset\/images\/bg-boost-mobile\.svg\'\)\]{
-  background-image: url('/public/asset/images/bg-boost-mobile.svg');
+.bg-\[url\(\'asset\/images\/bg-boost-mobile\.svg\'\)\]{
+  background-image: url('asset/images/bg-boost-mobile.svg');
+}
+
+.bg-\[url\(\'asset\/images\/bg-shorten-mobile\.svg\'\)\]{
+  background-image: url('asset/images/bg-shorten-mobile.svg');
+}
+
+.bg-\[url\(\'asset\/images\/illustration-working\.svg\'\)\]{
+  background-image: url('asset/images/illustration-working.svg');
 }
 
 .bg-cover{
@@ -861,6 +877,10 @@ video {
 
 .bg-no-repeat{
   background-repeat: no-repeat;
+}
+
+.p-1{
+  padding: 0.25rem;
 }
 
 .p-3{
@@ -1055,10 +1075,22 @@ video {
   outline-offset: 2px;
 }
 
+.transition{
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .transition-all{
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
+}
+
+.duration-200{
+  transition-duration: 200ms;
 }
 
 .ease-out{
@@ -1094,34 +1126,21 @@ video {
 
 /* Hover state for button */
 
-.btn-hover{
-  transition-property: opacity;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 300ms;
-  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
-}
+@media (min-width: 768px){
+  .btn-hover{
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
 
-.btn-hover:hover{
-  opacity: 0.6;
-}
-
-/* Hover state for blue-bg-button */
-
-.blue-bg-btn:hover::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(225, 225, 225, 0.5);
-  pointer-events: none;
-  /* Allows clicks to pass through the overlay */
-  transition: background-color 0.3s ease-out;
+  .btn-hover:hover{
+    opacity: 0.6;
+  }
 }
 
 .illustration-img {
-  background: url('/public/asset/images/illustration-working.svg') no-repeat;
+  background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   right: -1.5rem;
@@ -1130,7 +1149,7 @@ video {
 /* Form background */
 
 .shorten-m-bg {
-  background: url('/public/asset/images/bg-shorten-mobile.svg') no-repeat;
+  background-repeat: no-repeat;
   background-position: right top;
   background-color: hsl(257, 27%, 26%);
 }
@@ -1161,33 +1180,6 @@ video {
   }
 }
 
-/* Custom styles for "md" breakpoint */
-
-@media (min-width:768px) {
-  .md\:form-parent-md {
-    padding: max(3.1vw, 1.5rem);
-  }
-
-  .md\:width {
-    /* Input width */
-    width: min(80%, 50rem);
-  }
-
-  .btn {
-    /* form btn */
-    width: min(20%, 11rem);
-    padding: max(1%,0.5rem) max(2%,0.5rem);
-  }
-}
-
-/* Custom styles for the "lg" breakpoint */
-
-@media (min-width: 1024px) {
-  .lg\:form-parent-lg {
-    padding: max(3.5vw, 1.5rem) max(4vw, 1.5rem);
-  }
-}
-
 @media (min-width: 1180px) {
   .section-icon {
     left: 10%;
@@ -1203,7 +1195,6 @@ video {
     height: 2.2rem;
     right: -1.4rem;
     top: 50%;
-    /* transform: translateY(-11%); */
     transform: rotate(90deg);
     background-color: hsl(180, 66%, 49%);
   }
@@ -1268,7 +1259,39 @@ video {
   }
 }
 
-@media(min-width: 768px) {
+/* Custom styles for "md" breakpoint */
+
+@media (min-width:768px) {
+  .md\:form-parent-md {
+    padding: max(3.1vw, 1.5rem);
+  }
+
+  .md\:width {
+    /* Input width */
+    width: min(80%, 50rem);
+  }
+
+  .btn {
+    /* form btn */
+    width: min(20%, 11rem);
+    padding: max(1%,0.5rem) max(2%,0.5rem);
+  }
+
+  /* Hover state for blue-bg-button */
+
+  .blue-bg-btn:hover::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(225, 225, 225, 0.5);
+    pointer-events: none;
+    /* Allows clicks to pass through the overlay */
+    transition: background-color 0.3s ease-out;
+  }
+
   .form-wrapper.input-error::after {
     left: 0;
     transform: translateX(0);
@@ -1277,10 +1300,15 @@ video {
   }
 }
 
-@media(min-width: 1024px) {
+/* Custom styles for the "lg" breakpoint */
+
+@media (min-width: 1024px) {
+  .lg\:form-parent-lg {
+    padding: max(3.5vw, 1.5rem) max(4vw, 1.5rem);
+  }
+
   .form-wrapper.input-error::after {
     padding-left: max(4vw, 1.5rem);
-    /* bottom: 0.5rem; */
     bottom: 8%;
   }
 }
@@ -1293,6 +1321,16 @@ video {
 .before\:rounded-md::before{
   content: var(--tw-content);
   border-radius: 0.375rem;
+}
+
+.hover\:bg-secondary-red:hover{
+  --tw-bg-opacity: 1;
+  background-color: hsl(0 87% 67% / var(--tw-bg-opacity));
+}
+
+.hover\:text-white:hover{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 @media (min-width: 475px){
@@ -1403,10 +1441,6 @@ video {
     margin-top: 8rem;
   }
 
-  .md\:hidden{
-    display: none;
-  }
-
   .md\:h-\[22rem\]{
     height: 22rem;
   }
@@ -1423,20 +1457,8 @@ video {
     flex-direction: row;
   }
 
-  .md\:items-center{
-    align-items: center;
-  }
-
-  .md\:justify-between{
-    justify-content: space-between;
-  }
-
   .md\:gap-4{
     gap: 1rem;
-  }
-
-  .md\:gap-6{
-    gap: 1.5rem;
   }
 
   .md\:self-end{
@@ -1458,11 +1480,6 @@ video {
   .md\:px-6{
     padding-left: 1.5rem;
     padding-right: 1.5rem;
-  }
-
-  .md\:px-\[3\%\]{
-    padding-left: 3%;
-    padding-right: 3%;
   }
 
   .md\:py-4{
@@ -1534,6 +1551,14 @@ video {
 }
 
 @media (min-width: 1024px){
+  .lg\:absolute{
+    position: absolute;
+  }
+
+  .lg\:right-\[6vw\]{
+    right: 6vw;
+  }
+
   .lg\:mb-0{
     margin-bottom: 0px;
   }
@@ -1613,10 +1638,6 @@ video {
   .lg\:leading-normal{
     line-height: 1.5;
   }
-
-  .min-\[1024px\]\:text-left{
-    text-align: left;
-  }
 }
 
 @media (min-width: 1140px){
@@ -1675,6 +1696,10 @@ video {
 @media (min-width: 1280px){
   .xl\:right-\[-2rem\]{
     right: -2rem;
+  }
+
+  .xl\:right-\[8vw\]{
+    right: 8vw;
   }
 
   .xl\:mx-\[12vw\]{

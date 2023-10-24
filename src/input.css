@@ -20,24 +20,11 @@
 
 /* Hover state for button */
 .btn-hover {
-    @apply transition-opacity duration-300 ease-out hover:opacity-60;
-}
-
-/* Hover state for blue-bg-button */
-.blue-bg-btn:hover::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: rgba(225, 225, 225, 0.5);
-    pointer-events: none; /* Allows clicks to pass through the overlay */
-    transition: background-color 0.3s ease-out;
+    @apply md:ease-out md:duration-300 md:transition-opacity md:hover:opacity-60;
 }
 
 .illustration-img {
-    background: url('/public/asset/images/illustration-working.svg') no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     position: relative;
     right: -1.5rem;
@@ -45,7 +32,7 @@
 
 /* Form background */
 .shorten-m-bg {
-    background: url('/public/asset/images/bg-shorten-mobile.svg') no-repeat;
+    background-repeat: no-repeat;
     background-position: right top;
     background-color: hsl(257, 27%, 26%);
 }
@@ -72,29 +59,6 @@
         left: 48%;
         transform: translateX(-11%);
         background-color: hsl(180, 66%, 49%);
-    }
-}
-
-/* Custom styles for "md" breakpoint */
-@media (min-width:768px) {
-    .md\:form-parent-md {
-        padding: max(3.1vw, 1.5rem);
-    } 
-
-    .md\:width {  /* Input width */
-        width: min(80%, 50rem);
-    }
-
-    .btn {  /* form btn */
-        width: min(20%, 11rem);
-        padding: max(1%,0.5rem) max(2%,0.5rem);
-    }
-}
-
-/* Custom styles for the "lg" breakpoint */
-@media (min-width: 1024px) {
-    .lg\:form-parent-lg {
-      padding: max(3.5vw, 1.5rem) max(4vw, 1.5rem);
     }
 }
 
@@ -167,7 +131,34 @@
     }
 }
 
-@media(min-width: 768px) {
+/* Custom styles for "md" breakpoint */
+@media (min-width:768px) {
+    .md\:form-parent-md {
+        padding: max(3.1vw, 1.5rem);
+    } 
+
+    .md\:width {  /* Input width */
+        width: min(80%, 50rem);
+    }
+
+    .btn {  /* form btn */
+        width: min(20%, 11rem);
+        padding: max(1%,0.5rem) max(2%,0.5rem);
+    }
+
+    /* Hover state for blue-bg-button */
+    .blue-bg-btn:hover::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(225, 225, 225, 0.5);
+        pointer-events: none; /* Allows clicks to pass through the overlay */
+        transition: background-color 0.3s ease-out;
+    }
+
     .form-wrapper.input-error::after {
         left: 0;
         transform: translateX(0);
@@ -176,10 +167,14 @@
     }
 }
 
-@media(min-width: 1024px) {
+/* Custom styles for the "lg" breakpoint */
+@media (min-width: 1024px) {
+    .lg\:form-parent-lg {
+      padding: max(3.5vw, 1.5rem) max(4vw, 1.5rem);
+    }
+
     .form-wrapper.input-error::after {
         padding-left: max(4vw, 1.5rem);
-        /* bottom: 0.5rem; */
         bottom: 8%;
     }
 }
