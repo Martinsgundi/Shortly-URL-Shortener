@@ -1,18 +1,24 @@
-// Toggles Sidebar menu
+// Toggles Mobile menu
 const openMenuIcon = document.getElementById('open-menu-icon');
 const navMenu = document.getElementById('nav-menu');
+const overlay = document.getElementById("overlay");
+const body = document.body; 
 
 const openMenuList = () => {
-    const menuStyle = window.getComputedStyle(navMenu).getPropertyValue("max-height");
-    if (menuStyle === "0px") {
-      navMenu.style.maxHeight = "initial";
-      navMenu.style.opacity = "1";
-      navMenu.classList.add("drpdown-padding");
-    } else {
-      navMenu.style.maxHeight = "0";
-      navMenu.style.opacity = "0";
-      navMenu.classList.remove("drpdown-padding");
-    };
+  const menuStyle = window.getComputedStyle(navMenu).getPropertyValue("max-height");
+  if (menuStyle === "0px") {
+    navMenu.style.maxHeight = "initial";
+    navMenu.style.opacity = "1";
+    navMenu.classList.add("drpdown-padding");
+  } else {
+    navMenu.style.maxHeight = "0";
+    navMenu.style.opacity = "0";
+    navMenu.classList.remove("drpdown-padding");
+  };
+
+  openMenuIcon.classList.toggle("active");
+  body.classList.toggle("active");
+  overlay.classList.toggle("hidden");
 };
 
 openMenuIcon.addEventListener('click', openMenuList);

@@ -13,7 +13,7 @@
         
         <header>
             <nav id="nav" class="px-[6vw] min-[900px]:px-[10vw] xl:px-[12vw]">
-                <div class="flex items-center justify-between mx-auto mt-10 mb-2">
+                <div class="flex justify-between mx-auto mt-10 mb-2">
 
                     <!-- Nav-left -->
                     <div class="flex justify-between ">
@@ -32,10 +32,12 @@
 
                     <!-- Nav-right -->
                     <div>
-                        <!-- M-menu-icon -->
-                        <button role="button" id="open-menu-icon" class="min-[900px]:hidden">
-                            <img class="w-6" src="asset/images/Hamburger-icon.svg" alt="open-menu-icon">
-                        </button>
+                        <!-- Hamburger -->
+                        <div id="open-menu-icon" class="relative cursor-pointer hamburger z-50 min-[900px]:hidden ">
+                            <span class="bar bg-[#D0D6F9] mt-[4px]"></span>
+                            <span class="bar bg-[#D0D6F9] mt-[4px]"></span>
+                            <span class="bar bg-[#D0D6F9] mt-[4px]"></span>
+                        </div>
 
                         <!-- D-navlist -->
                         <ul class="hidden min-[900px]:flex text-base items-center gap-9">
@@ -46,7 +48,7 @@
                 </div>
 
                 <!-- M-dropdown -->
-                <div id="nav-menu" class="w-[88%] mt-4 px-6 text-center text-white bg-primary-darkViolet rounded-xl font-bold absolute z-10 max-h-0 overflow-hidden transition-all duration-500ms ease-out sm:w-96 sm:right-[6vw] min-[900px]:hidden">
+                <div id="nav-menu" class="w-[88%] mt-4 px-6 text-center text-white bg-primary-darkViolet rounded-xl font-bold absolute z-50 max-h-0 overflow-hidden transition-all duration-500ms ease-out sm:w-96 sm:right-[6vw] min-[900px]:hidden">
                     <ul class="grid gap-6">
                         <li><a href="#">Features</a></li>
                         <li><a href="#">Pricing</a></li>
@@ -65,7 +67,10 @@
 
         </header>
         
-
+        <!-- Overlay(Toggles body b-color when menu-btn is clicked) -->
+        <div id="overlay" class="fixed top-0 left-0 z-40 hidden w-full h-full pointer-events-none bg-gray-950 bg-opacity-60">   
+        </div>
+        
         <main>
             <div> <!--main-container-->
                 <div class="grid mb-40 overflow-x-clip md:mb-48 md:grid-cols-[minmax(0,_59%)_minmax(0,_1fr)] ">

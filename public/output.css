@@ -570,6 +570,14 @@ video {
   }
 }
 
+.pointer-events-none{
+  pointer-events: none;
+}
+
+.fixed{
+  position: fixed;
+}
+
 .absolute{
   position: absolute;
 }
@@ -578,8 +586,44 @@ video {
   position: relative;
 }
 
-.z-10{
+.left-0{
+  left: 0px;
+}
+
+.top-0{
+  top: 0px;
+}
+
+.z-40{
+  z-index: 40;
+}
+
+.z-50{
+  z-index: 50;
+}
+
+.z-\[40\]{
+  z-index: 40;
+}
+
+.z-\[50\]{
+  z-index: 50;
+}
+
+.z-\[80\]{
+  z-index: 80;
+}
+
+.z-\[90\]{
+  z-index: 90;
+}
+
+.z-\[10\]{
   z-index: 10;
+}
+
+.z-\[100\]{
+  z-index: 100;
 }
 
 .mx-\[6vw\]{
@@ -666,8 +710,16 @@ video {
   margin-top: 1rem;
 }
 
+.mt-\[3px\]{
+  margin-top: 3px;
+}
+
 .mt-\[5\.5rem\]{
   margin-top: 5.5rem;
+}
+
+.mt-\[4px\]{
+  margin-top: 4px;
 }
 
 .inline-block{
@@ -694,6 +746,10 @@ video {
   height: 20.5rem;
 }
 
+.h-full{
+  height: 100%;
+}
+
 .max-h-0{
   max-height: 0px;
 }
@@ -714,6 +770,10 @@ video {
   width: 100%;
 }
 
+.max-w-\[25ch\]{
+  max-width: 25ch;
+}
+
 .max-w-\[400px\]{
   max-width: 400px;
 }
@@ -722,17 +782,13 @@ video {
   max-width: 457px;
 }
 
-.max-w-\[35ch\]{
-  max-width: 35ch;
-}
-
-.max-w-\[25ch\]{
-  max-width: 25ch;
-}
-
 .translate-y-\[-50\%\]{
   --tw-translate-y: -50%;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.cursor-pointer{
+  cursor: pointer;
 }
 
 .flex-col{
@@ -842,9 +898,19 @@ video {
   border-color: rgb(107 114 128 / var(--tw-border-opacity));
 }
 
+.bg-\[\#D0D6F9\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(208 214 249 / var(--tw-bg-opacity));
+}
+
 .bg-gray-100{
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
+.bg-gray-950{
+  --tw-bg-opacity: 1;
+  background-color: rgb(3 7 18 / var(--tw-bg-opacity));
 }
 
 .bg-neutral-veryDarkViolet{
@@ -865,6 +931,10 @@ video {
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-opacity-60{
+  --tw-bg-opacity: 0.6;
 }
 
 .bg-\[url\(\'asset\/images\/bg-boost-mobile\.svg\'\)\]{
@@ -1149,6 +1219,31 @@ video {
   .btn-hover:hover{
     opacity: 0.6;
   }
+}
+
+/* Hamburger */
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+body.active {
+  overflow: hidden;
 }
 
 .illustration-img {
@@ -1601,14 +1696,6 @@ video {
     display: none;
   }
 
-  .lg\:w-\[\]{
-    width: ;
-  }
-
-  .lg\:w-\[2\]{
-    width: 2;
-  }
-
   .lg\:w-\[25\%\]{
     width: 25%;
   }
@@ -1619,10 +1706,6 @@ video {
 
   .lg\:max-w-\[40ch\]{
     max-width: 40ch;
-  }
-
-  .lg\:max-w-\[35ch\]{
-    max-width: 35ch;
   }
 
   .lg\:flex-row{
@@ -1663,10 +1746,6 @@ video {
   .lg\:text-6xl{
     font-size: 3.75rem;
     line-height: 1;
-  }
-
-  .lg\:text-\[1\.2rem\]{
-    font-size: 1.2rem;
   }
 
   .lg\:text-\[1\.3rem\]{
