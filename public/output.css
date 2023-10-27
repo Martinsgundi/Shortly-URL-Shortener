@@ -1561,6 +1561,14 @@ body.active {
     background-image: url('/public/asset/images/bg-shorten-desktop.svg');
   }
 
+  .md\:bg-\[url\(\'asset\/images\/bg-boost-desktop\.svg\'\)\]{
+    background-image: url('asset/images/bg-boost-desktop.svg');
+  }
+
+  .md\:bg-\[url\(\'asset\/images\/bg-shorten-desktop\.svg\'\)\]{
+    background-image: url('asset/images/bg-shorten-desktop.svg');
+  }
+
   .md\:bg-top{
     background-position: top;
   }
