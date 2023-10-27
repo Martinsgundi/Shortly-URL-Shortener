@@ -40,7 +40,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Check out my solution on Front end mentor](https://your-solution-url.com)
+- Solution URL: [Check out my solution on Front end mentor](https://www.frontendmentor.io/solutions/shortly-url-shortener-utilizing-tinyurl-api-42JFv55ssi)
 - Live Site URL: [Check out the live site](https://gundi-url-shortener.netlify.app/)
 
 ## My process
