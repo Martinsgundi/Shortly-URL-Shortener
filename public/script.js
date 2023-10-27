@@ -63,7 +63,7 @@ const deleteLink = (key) => {
 
   if (arrayOfLinks) {
     // Find the index of the link to delete based on the key
-    const indexToDelete = arrayOfLinks.findIndex(link => link.key === key);
+    const indexToDelete = arrayOfLinks.findIndex(link => link.key === key)
 
     if (indexToDelete !== -1) {
       // Remove the link from the array
@@ -74,8 +74,8 @@ const deleteLink = (key) => {
 
       // Remove the corresponding element from the DOM
       resultElement.removeChild(document.getElementById(key));
-    }
-  }
+    };
+  };
 };
 
 // Generates new ID
@@ -129,7 +129,7 @@ const shortenUrl = async (inputUrl) => {
         </div>
             
         <!-- Long Link -->
-        <div class="max-w-[25ch] overflow-x-scroll min-[475px]:mx-auto min-[475px]:text-center min-[475px]:max-w-[35ch] lg:text-left lg:mx-0">
+        <div class="max-w-[25ch] overflow-x-auto min-[475px]:mx-auto min-[475px]:text-center min-[475px]:max-w-[35ch] lg:text-left lg:mx-0">
           <span class="text-base text-neutral-veryDarkViolet xl:text-xl">${longUrl}</span>   
         </div>
         
@@ -244,7 +244,7 @@ window.addEventListener('load', () => {
           </div>
 
           <!-- Long Link -->
-          <div class="max-w-[25ch] overflow-x-scroll min-[475px]:mx-auto min-[475px]:text-center min-[475px]:max-w-[35ch] lg:text-left lg:mx-0">
+          <div class="max-w-[25ch] overflow-x-auto min-[475px]:mx-auto min-[475px]:text-center min-[475px]:max-w-[35ch] lg:text-left lg:mx-0">
             <span class="text-base text-neutral-veryDarkViolet xl:text-xl">${link.longUrl}</span>   
           </div>
           
