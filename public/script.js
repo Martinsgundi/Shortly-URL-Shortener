@@ -4,6 +4,23 @@ const navMenu = document.getElementById('nav-menu');
 const overlay = document.getElementById("overlay");
 const body = document.body; 
 
+
+const closeDrpdownMenu = (e) => {
+  const isMenuOpen = navMenu.style.maxHeight === 'initial'; // Check if the menu is open
+  const isClickInsideMenu = navMenu.contains(e.target); // Check if the click is inside the menu
+  const isClickOnHarmburger = openMenuIcon.contains(e.target); // Check if the click is on the harmburger icon
+
+  if (isMenuOpen && !isClickInsideMenu && !isClickOnHarmburger) {
+    navMenu.style.maxHeight = '0';
+    navMenu.style.opacity = '0';
+    navMenu.classList.remove('drpdown-padding');
+    openMenuIcon.classList.remove('active');
+    overlay.classList.add('hidden');
+  };
+};
+
+body.addEventListener('click', closeDrpdownMenu);
+
 const openMenuList = () => {
   const menuStyle = window.getComputedStyle(navMenu).getPropertyValue("max-height");
   if (menuStyle === "0px") {
@@ -17,7 +34,6 @@ const openMenuList = () => {
   };
 
   openMenuIcon.classList.toggle("active");
-  body.classList.toggle("active");
   overlay.classList.toggle("hidden");
 };
 
